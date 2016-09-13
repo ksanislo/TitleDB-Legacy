@@ -1,0 +1,3 @@
+Action titledb-api /api.py virtual
+SetHandler titledb-api
+Options ExecCGI

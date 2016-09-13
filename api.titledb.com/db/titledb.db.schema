@@ -1,0 +1,5 @@
+CREATE TABLE github_credentials (username TEXT(64), password TEXT(64));
+
+CREATE TABLE request_headers (name TEXT(256), value TEXT(8192));
+
+CREATE TABLE cias(id INTEGER PRIMARY KEY, titleid TEXT(16), author TEXT(64), description TEXT(128), name TEXT(64), url TEXT(4096), create_time DATETIME DEFAULT CURRENT_TIMESTAMP, update_time DATETIME, icon_small TEXT(1536), icon_large TEXT(6144), size BIGINT);
