@@ -24,7 +24,7 @@ from PIL import Image
 
 cgitb.enable(format='text')
 
-blacklist = ['0004000000000000', '0004000000000600', '0004000000DEAA00', '0004000000003D00']
+blacklist = ['0004000000000000', '0004000000000600', '0004000000DEAA00', '0004000000003D00', '0004000000175E00', '0004000000164800']
 
 # List of archive_types
 archive_types = ['zip','7z','rar','txz','xz','tgz','gz']
@@ -515,7 +515,7 @@ def get_local_cia_info(filename):
 		except IndexError:
 			return None
 
-		if data['titleid'][0:8] != "00040000":
+		if data['titleid'][0:8] != "00040000": # and data['titleid'][0:8] != "00048004":
 			return None
 
 		if data['titleid'] in blacklist:
@@ -576,7 +576,7 @@ def get_cia_info(url):
 		return {'error': 'Unexpected return length'}
 
 	data['titleid'] = "%0.16X" % numpy.frombuffer(req.content, dtype='>u8', count=1)[0]
-	if data['titleid'][0:8] != "00040000":
+	if data['titleid'][0:8] != "00040000": # and data['titleid'][0:8] != "00048004":
 		return {'error', 'Not a 3DS .cia file'}
 
 	if data['titleid'] in blacklist:
