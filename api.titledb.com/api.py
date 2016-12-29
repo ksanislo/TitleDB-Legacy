@@ -24,7 +24,17 @@ from PIL import Image
 
 cgitb.enable(format='text')
 
-blacklist = ['0004000000000000', '0004000000000600', '0004000000DEAA00', '0004000000003D00', '0004000000175E00', '0004000000164800']
+blacklist = ['0004000000000000', # Bad ID, always shows as installed
+             '0004000000000600', # Undertale BS
+             '0004000000F00300', # Unknown, (c) Nintendo
+             '000400000D000200', # Dev Menu, (c) Nintendo
+             '000400000FF40A00', # SaveDataFiler, (c) Nintendo
+             '000400000002FF00', # TitleManager, (c) Nintendo
+             '0004000000DEAA00', # Undertale BS
+             '0004000000003D00', # Undertale BS
+             '0004000000A59B00', # Pokemon Crystal
+             '0004000000175E00', # Pokemon Moon
+             '0004000000164800'] # Pokemon Sun
 
 # List of archive_types
 archive_types = ['zip','7z','rar','txz','xz','tgz','gz']
