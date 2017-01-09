@@ -1,0 +1,1 @@
+*/15 *   *   *   *   www-data   wget --post-data='{"action":"update"}' -qO- https://api.titledb.com/ >> /tmp/titledb-update.log
