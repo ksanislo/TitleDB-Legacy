@@ -1,4 +1,4 @@
-api.titledb.com/db/*.db
+#api.titledb.com/db/*.db
 api.titledb.com/cache/http*
 api.titledb.com/log/*.log
 **/*.bak
